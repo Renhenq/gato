@@ -27,11 +27,22 @@ body{
     font-size: 30px;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
-    position: sticky;
-    top: 10px;
     animation: rainbowShift 5s linear infinite;
 }
- @keyframes rainbowShift {
+
+.buttons{
+    position: sticky;
+    top: 0;
+    padding: 10px 0; 
+    background-color: white; 
+    z-index: 10;
+    display: flex; 
+    justify-content: center; 
+    gap: 15px;
+    background: none;
+}
+
+@keyframes rainbowShift {
     0% {
         background-position: 0% 50%;
     }
@@ -52,4 +63,11 @@ body{
     height: 300px;
     object-fit: cover;
     border-radius: 16px;
+}
+
+@media (max-width:500px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
 }
